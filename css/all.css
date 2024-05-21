@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 全域 border box */
+*,*::before,*::after{
+    box-sizing: border-box;
+  }
+
+/* rwd img css */
+img{
+    max-width: 100%;
+    height: auto;
+  }
+
+body{
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.5;
+}
+
+.container{
+	max-width: 1296px;
+	margin: 0 auto;
+    /* background-color: aqua; */
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.wrap{
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 20%;
+}
+
+.menu{
+    display: flex;
+    width: 80%;
+}
+.menu li{
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.menu a{
+    padding: 4px 8px 4px 8px;
+    
+    /* 製作偽元素使用 */
+    position: relative;
+
+    &:hover{
+        font-weight: 600;
+    }
+    /* 當滑鼠 Hover 時，產生瞄準效果 */
+    &:hover::before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        top: 0;
+        left: 0;
+        border-top: 1px solid #919191;
+        border-left: 1px solid #919191;
+    }
+    &:hover::after{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        top: 0;
+        right: 0;
+        border-top: 1px solid #919191;
+        border-right: 1px solid #919191;
+    }
+}
+.menu-deco-down{
+
+    /* 製作偽元素使用 */
+    position: relative;
+
+    &:hover::before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        left: 0;
+        bottom: 0;
+        border-left: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+    }
+    &:hover::after{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        right: 0;
+        bottom: 0;
+        border-right: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+    }
+}
+
+.menuBtn{
+    display: none;
+}
+
+.showMenu{
+    flex-direction: column;
+}
+
+/* 區塊：Banner */
+.banner-bg{
+    background-color: #FAFAFA;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.quote{
+    color: #1E1E1E;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.quote-right{
+    align-self: flex-end;
+}
+.quote h2{
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #1E1E1E;
+}
+
+.quote-upper{
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 2;
+}
+.mark-upper{
+    position: absolute;
+    bottom: 0;
+    right: 7%;
+    z-index: -1;
+}
+.quote-lower{
+    position: relative;
+    z-index: 2;
+}
+.mark-lower{
+    position: absolute;
+    bottom: 0;
+    right: 11%;
+    z-index: -1;
+}
+.banner-list{
+    color: #5B5B5B;
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 24px;
+}
+.banner-list li{
+    width: 50%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.banner-list hr{
+    width: 24px;
+    border: 2px solid #C1C1C1;
+}
+.banner-list p{
+    padding-top: 8px;
+}
+
+
+
+/* 區塊：卡片區塊 */
+.works{
+    padding-top: 40px;
+}
+
+.works-text h2{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #3B3B3B;
+}
+.works-list{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.works-list p{
+    /* 助教說：這是預設屬性，可以不用額外設定 */
+    /* font-size: 16px;
+    font-weight: 400; */
+    color: #919191;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.card{
+    width: 48%;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 80px;
+}
+.card img{
+    border: 1px solid #F1F1F1;
+    border-radius: 8px;
+}
+
+.works-text{
+    padding: 16px;
+}
+
+.work-tags{
+    /* 助教說：這是預設屬性，可以不用額外設定 */
+    /* font-size: 16px;
+    font-weight: 400; */
+    color: #3B3B3B;
+    display: flex;
+    flex-wrap: wrap;
+}
+.work-tags li{
+    margin-right: 16px;
+    padding: 4px 12px;
+    background-color: #F1F1F1;
+    border-radius: 16px;
+    width: fit-content;
+    /* 讓 Tag 換行時上下有間距 */
+    margin-top: 8px; 
+}
+/* 區塊：分頁按鈕 */
+.pagination{
+    display: flex;
+    justify-content: center;
+    padding-top: 72px;
+    padding-bottom: 120px;
+}
+.pagination li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.pagination a{
+    display: block;
+    padding: 2px 13px 2px 13px;
+    border-radius: 4px;
+    &:hover{
+        background-color: #1E1E1E;
+        color: #fff;
+    }
+}
+.page-selected{
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+/* 區塊：footer */
+.footer-bg{
+    background-image:url("../images/footer-bg-lg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+.footer-description{
+    color: #3B3B3B;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.contact{
+    color: #919191;
+}
+.footer-social{
+    margin-top: 68px;
+    margin-bottom: 68px;
+}
+
+.social-btn{
+    /* 想設 padding 撐開按鈕，但無效，不知道為蝦咪??? */
+    padding: 8px, 24px, 8px, 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #C1C1C1;
+    border-radius: 8px;
+}
+.social-btn:hover{
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 0.5px #fff;
+    border: 1px solid #000;
+}
+
+.social-btn h4{
+    margin-left: 8px;
+}
+
+
+/* iPad 版 */
+@media (max-width:992px) {
+    .header{
+        position: relative;
+        z-index: 11;
+    }
+    .container{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .menu{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100%;
+        /* 預設收起來 */
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #fff;
+        text-align: center;
+        z-index: 10;
+        border-top: 1px solid #F1F1F1;
+    }
+    .menu-deco-down{
+        display: inline;
+    }
+    .menu li{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .menuBtn{
+        display: initial;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    /* 區塊：Banner */
+    .banner-bg{
+        padding-top: 40px;
+        padding-left: 37.5px;
+        padding-right: 37.5px;
+    }
+    .quote{
+        width: 100%;
+    }
+    .quote-left{
+        align-self: center;
+    }
+    .quote-right{
+        /* 下引號消失 */
+        display: none;
+    }
+    .banner-list{
+        max-width: 100%;
+        padding-top: 40px;
+    }
+    .list-1{
+        padding-bottom: 20px;
+    }
+
+    /* 區塊：卡片區塊 */
+    .works{
+        padding-top: 32px;
+    }
+    .card{
+        width: 100%;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+    }
+    .works-list{
+        justify-content: center;
+    }
+    .works-list p{
+        margin-bottom: 12px;
+    }
+    .work-tags li{
+        margin-right: 8px;
+        /* 讓 Tag 換行時上下有間距 */
+        margin-top: 4px; 
+    }
+
+
+
+    /* 區塊：分頁按鈕 */
+    .pagination{
+        padding-top: 48px;
+        padding-bottom: 80px;
+    }
+
+}
+
+/* 手機版 */
+@media (max-width:767px) {
+    /* 區塊：Banner */
+    .banner-list{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-list li{
+        width: 100%;
+    }
+    /* 區塊：footer */
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-about{
+        margin-top: 40px;
+        text-align: center;
+    }
+    .footer-social{
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+}
+
+/* 手機版 */
+@media (max-width:375px) {
+    /* 區塊：footer */
+    /* 更換背景圖 */
+    .footer-bg{
+        background-image:url("../images/footer-bg-sm.png");
+    }
+}
+
+
+
