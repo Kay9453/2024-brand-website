@@ -363,10 +363,17 @@ a{
 .social-btn:hover{
     background-color: #000;
     color: #fff;
+    /* text-shadow: 0 0 5px #fff; */
     font-weight: 700;
-    text-shadow: 0 0 0.5px #fff;
     border: 1px solid #000;
 }
+.social-btn-selected{
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid #000;
+}
+
 
 .social-btn h4{
     margin-left: 8px;
