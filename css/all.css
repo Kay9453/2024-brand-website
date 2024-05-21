@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /* CSS Reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -62,7 +63,7 @@ img{
   }
 
 body{
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
     line-height: 1.5;
 }
 
@@ -192,25 +193,31 @@ a{
 
 .quote-upper{
     margin-bottom: 8px;
+}
+
+.quote-upper span{
     position: relative;
     z-index: 2;
 }
+.quote-lower span{
+    position: relative;
+    z-index: 2;
+}
+
 .mark-upper{
     position: absolute;
     bottom: 0;
-    right: 7%;
+    left: 10%;
     z-index: -1;
 }
-.quote-lower{
-    position: relative;
-    z-index: 2;
-}
+
 .mark-lower{
     position: absolute;
     bottom: 0;
-    right: 11%;
+    left: 10%;
     z-index: -1;
 }
+
 .banner-list{
     color: #5B5B5B;
     max-width: 50%;
@@ -416,6 +423,10 @@ a{
     }
     .quote-left{
         align-self: center;
+    }
+    .quote h2{
+        font-size: 20px;
+        line-height: 1.5;
     }
     .quote-right{
         /* 下引號消失 */
