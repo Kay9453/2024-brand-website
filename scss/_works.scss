@@ -1,0 +1,390 @@
+// 頁面：作品集 works
+
+/* 區塊：Banner */
+.wp-banner-bg{
+    background-color: $gray-100;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.quote{
+    color: $gray-800;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.quote-right{
+    align-self: flex-end;
+}
+.quote h2{
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: $gray-800;
+}
+
+.quote-upper{
+    margin-bottom: 8px;
+    span{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.quote-lower{ 
+    span{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.mark-upper{
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    z-index: -1;
+}
+
+.mark-lower{
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    z-index: -1;
+}
+
+.wp-banner-list{
+    color: $gray-600;
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 24px;
+}
+.wp-banner-list{
+    li{
+        width: 50%;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        hr{
+            width: 24px;
+            border: 2px solid $gray-400;
+        }
+        p{
+            padding-top: 8px;
+        }
+    }
+}
+
+
+
+/* 區塊：卡片區塊 */
+.works{
+    padding-top: 40px;
+}
+
+.works-list{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.works-text{
+    padding: 16px;
+    h2{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $gray-700;
+    }
+    p{
+        /* 助教說：這是預設屬性，可以不用額外設定 */
+        /* font-size: 16px;
+        font-weight: 400; */
+        color: $gray-500;
+        margin-top: 8px;
+        margin-bottom: 16px;
+    }
+}
+
+.card{
+    width: 47%;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 80px;
+    cursor: pointer;
+    img{
+        border: 1px solid $gray-200;
+        border-radius: 8px;
+    }
+}
+
+
+.work-tags{
+    /* 助教說：這是預設屬性，可以不用額外設定 */
+    /* font-size: 16px;
+    font-weight: 400; */
+    color: $gray-700;
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        margin-right: 16px;
+        padding: 4px 12px;
+        background-color: $gray-200;
+        border-radius: 16px;
+        width: fit-content;
+        /* 讓 Tag 換行時上下有間距 */
+        margin-top: 8px; 
+    }
+}
+/* 區塊：分頁按鈕 */
+.pagination{
+    display: flex;
+    justify-content: center;
+    padding-top: 72px;
+    padding-bottom: 120px;
+    li{
+        margin-left: 5px;
+        margin-right: 5px;
+        a{
+            display: block;
+            padding: 2px 13px 2px 13px;
+            border-radius: 4px;
+            &:hover{
+                background-color: $gray-800;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.page-selected{
+    background-color: $gray-800;
+    color: #fff;
+}
+
+// 區塊：Modal
+// 上半部
+.modal-header{
+    border-bottom: 0;
+}
+
+.work-introduce{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    .work-name{
+        text-align: center;
+        h2{
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 33.6px;
+            color: $gray-700;
+        }
+        p{
+            color: $gray-500;
+            padding-top: 8px;
+        }
+    }
+    .work-concept{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        h3{
+            width: 55%;
+            color: $gray-800;
+        }
+        .design-rules{
+            width: 37%;
+            color: $gray-600;
+            padding-left: 24px;
+            border-left: 1px solid $gray-400;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+}
+
+// 下半部
+.work-intro-detail-bg{
+    background-color: $gray-100;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .work-intro-detail{
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+        li{
+            text-align: center;
+            img{
+                border-radius: 20px;
+                margin: 0 auto;
+            }
+            h3{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 28.8px;
+                color: $gray-800;
+                margin-top: 24px;
+            }
+            p{  
+                color: $gray-600;
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+/* iPad 版 */
+@media (max-width:992px) {
+
+    /* 區塊：Banner */
+    .wp-banner-bg{
+        padding-top: 40px;
+        padding-left: 37.5px;
+        padding-right: 37.5px;
+    }
+    .quote{
+        width: 100%;
+    }
+    .quote-left{
+        align-self: center;
+    }
+    .quote h2{
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    .quote-right{
+        /* 下引號消失 */
+        display: none;
+    }
+    .wp-banner-list{
+        max-width: 100%;
+        padding-top: 40px;
+    }
+    .list-1{
+        padding-bottom: 20px;
+    }
+
+    /* 區塊：卡片區塊 */
+    .works{
+        padding-top: 32px;
+    }
+    .card{
+        width: 100%;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+    }
+    .works-list{
+        justify-content: center;
+        p{
+            margin-bottom: 12px;
+        }
+    }
+    .work-tags{
+        li{
+            margin-right: 8px;
+            /* 讓 Tag 換行時上下有間距 */
+            margin-top: 4px; 
+        }
+    } 
+
+
+
+    /* 區塊：分頁按鈕 */
+    .pagination{
+        padding-top: 48px;
+        padding-bottom: 80px;
+    }
+
+    // 區塊：Modal
+
+    // 上半部
+    .work-introduce{
+        gap: 24px;
+        margin-top: 8px;
+        margin-bottom: 24px;
+        .work-name{
+
+            h2{
+                line-height: 42px;
+            }
+        }
+        .work-concept{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            padding-left: 16px;
+            padding-right: 16px;
+            h3{
+                width: 100%;
+                border-bottom: 1px solid $gray-400;
+                padding-bottom: 24px;
+            }
+            .design-rules{
+                width: 100%;
+                padding-left: 0;
+                border-left: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+            }
+        }
+    }
+
+    // 下半部
+    .work-intro-detail-bg{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .work-intro-detail{
+            li{
+                h3{
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-top: 16px;
+                }
+                p{  
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+
+}
+
+/* 手機版 */
+@media (max-width:767px) {
+
+    /* 區塊：Banner */
+    .wp-banner-list{
+        flex-direction: column;
+        align-items: center;
+        li{
+            width: 100%;
+        }
+    }
+
+}
+
+/* 手機版 */
+@media (max-width:375px) {
+
+}
+
+
+

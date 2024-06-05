@@ -1,0 +1,204 @@
+// Header 的 css
+
+body {
+    padding-top: 88px;
+}
+
+// .container{
+// 	max-width: 1296px;
+// 	margin: 0 auto;
+//     /* background-color: aqua; */
+// }
+
+.header-bg{
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0.7;
+    z-index: 10;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 20%;
+    h1{
+        a{
+            /* 為了 SEO 搜尋，改用圖片取代文字寫法，參考此篇 https://ithelp.ithome.com.tw/m/articles/10215276 */
+
+            /* 載入 LOGO 圖片 */
+            background-image:url(../images/logo.png);
+            width: 90px;
+            height: 40px;
+            
+            /* 文字縮排，縮排 101% 等於完全縮到原來的寬度之外 */
+            text-indent: 101%;
+            
+            /* overflow 當原素滿出他原來的框框時要做什麼動作，選擇 hidden 隱藏他，這是看不到文字的主因 */
+            overflow:hidden;
+            
+            /* white-space 決定如何處理空白字元，因為就算是空白字元，也還是算佔空間，若超出空間可能會啟動捲軸，所以我們設定為nowrap，就不會有卷軸產生 */
+            white-space: nowrap;
+            
+            /* 浮起來靠左排 */
+            float:left; 
+        }
+    }
+}
+
+.menu{
+    display: flex;
+    width: 80%;
+    li{
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+.menu{
+    a{
+        padding: 4px 8px 4px 8px;
+        
+        /* 製作偽元素使用 */
+        position: relative;
+    
+        &:hover{
+            font-weight: 600;
+        }
+        /* 當滑鼠 Hover 時，產生瞄準效果 */
+        &:hover::before{
+            position: absolute;
+            content: '';
+            width: 8px;
+            height: 8px;
+            top: 0;
+            left: 0;
+            border-top: 1px solid #919191;
+            border-left: 1px solid #919191;
+        }
+        &:hover::after{
+            position: absolute;
+            content: '';
+            width: 8px;
+            height: 8px;
+            top: 0;
+            right: 0;
+            border-top: 1px solid #919191;
+            border-right: 1px solid #919191;
+        }
+    }
+} 
+    
+.menu-deco-down{
+
+    /* 製作偽元素使用 */
+    position: relative;
+
+    &:hover::before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        left: 0;
+        bottom: 0;
+        border-left: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+    }
+    &:hover::after{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        right: 0;
+        bottom: 0;
+        border-right: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+    }
+}
+
+.menu-active{
+    font-weight: 600;
+    /* 製作偽元素使用 */
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        left: 0;
+        bottom: 0;
+        border-left: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+        -webkit-box-reflect: above 12px;  // 鏡射效果
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        right: 0;
+        bottom: 0;
+        border-right: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+        -webkit-box-reflect: above 12px;  // 鏡射效果
+    }
+}
+
+
+
+.menuBtn{
+    display: none;
+}
+
+/* iPad 版 */
+@media (max-width:992px) {
+    body {
+        padding-top: 60px;
+    }
+    .header{
+        position: relative;
+        z-index: 11;
+    }
+    // .container{
+    //     padding-left: 12px;
+    //     padding-right: 12px;
+    // }
+    .menu{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100%;
+        /* 預設收起來 */
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #fff;
+        text-align: center;
+        z-index: 10;
+        border-top: 1px solid #F1F1F1;
+    }
+    .menu-deco-down{
+        display: inline;
+    }
+    .menu li{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .menuBtn{
+        display: initial;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .close-pic{
+        display: none;
+    }
+}

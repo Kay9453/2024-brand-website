@@ -1,0 +1,105 @@
+// Footer css
+
+/* 區塊：footer */
+// .container{
+// 	max-width: 1296px;
+// 	margin: 0 auto;
+//     /* background-color: aqua; */
+// }
+
+.footer-bg{
+    background-image:url("../images/footer-bg-lg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+.footer-description{
+    color: #3B3B3B;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.contact{
+    a{
+        color: #919191;
+    }
+} 
+
+.footer-social{
+    margin-top: 68px;
+    margin-bottom: 68px;
+    .footer-social-btn{
+        padding: 8px 24px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        border: 1px solid $gray-400;
+        border-radius: 8px;
+        &:hover{
+            background-color: $gray-500;
+            color: #fff;
+            /* text-shadow: 0 0 5px #fff; */
+            // font-weight: 700;
+            border: 1px solid $gray-500;
+        }
+        h4{
+            margin-left: 8px;
+        }
+    }
+    .social-btn-selected{
+        background-color: #000;
+        color: #fff;
+        font-weight: 700;
+        border: 1px solid #000;
+    }
+}
+
+
+// .social-btn:hover{
+//     background-color: #000;
+//     color: #fff;
+//     text-shadow: 0 0 5px #fff;
+//     font-weight: 700;
+//     border: 1px solid #000;
+// }
+
+/* iPad 版 */
+// @media (max-width:992px) {
+//     .container{
+//         padding-left: 12px;
+//         padding-right: 12px;
+//     }
+// }
+
+/* 手機版 */
+@media (max-width:767px) {
+
+    /* 區塊：footer */
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-about{
+        margin-top: 40px;
+        text-align: center;
+    }
+    .footer-social{
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+}
+
+/* 手機版 */
+@media (max-width:375px) {
+    /* 區塊：footer */
+    /* 更換背景圖 */
+    .footer-bg{
+        background-image:url("../images/footer-bg-sm.png");
+    }
+}

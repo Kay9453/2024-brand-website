@@ -1,0 +1,177 @@
+//頁面：部落格 blog
+
+
+// 共用標題樣式
+.blog-title-sec-de{
+    padding-top: 120px;
+    padding-bottom: 80px;
+    .blog-title-sec{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        .blog-title-deco-left{
+            display: block;
+            background-image: url("../images/title\ deco-left-lg.png");
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 6px;
+        }
+        .blog-title-deco-right{
+            display: block;
+            background-image: url("../images/title\ deco-right-lg.png");
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 6px;
+        }
+        .blog-title{
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 38.4px;
+            letter-spacing: 3.84px;  //figma 寫 12%
+            color: $gray-700;
+            text-align: center;
+        }	
+    }
+
+    p{
+        font-size: 16px;
+        color: $gray-500;
+        margin-top: 24px;
+        text-align: center;
+    }
+}
+
+//文章列表
+.blog-bg{
+    padding-bottom: 120px;
+}
+.blog-content{
+    display: flex;
+    gap: 24px;
+    .story-list{
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        li{
+            display: flex;
+            gap: 16px;
+            position: relative;
+            img{
+                border: 1px solid $gray-200;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+.story-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .story-timetag{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        span{
+            color: $gray-600;
+        }
+        .story-tag{
+            padding: 4px 12px;
+            color: $gray-700;
+            background-color: $gray-200;
+            border-radius: 16px;
+        }
+    }
+    h2{
+        color: $gray-700;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+    p{
+        color: $gray-700;
+    }
+}
+
+// 部落格內文 link
+.stretched-link{
+    &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: pointer;
+    }
+}
+
+/* iPad 版 */
+@media (max-width:992px) {
+    //文章列表
+    .blog-bg{
+        padding-bottom: 80px;
+    }
+    .blog-content{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+        padding-left: 0;
+        padding-right: 0;
+        .story-list{
+            width: 100%;
+            padding-left: 34.5px;
+            padding-right: 34.5px;
+            gap: 40px;
+            li{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    .story-content{
+        display: flex;
+        flex-direction: column;
+        padding-left: 8px;
+        padding-right: 8px;
+        .story-timetag{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+}
+
+
+/* 手機版 */
+@media (max-width:767px) {
+    // 共用標題樣式
+    .blog-title-sec-de{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .blog-title-sec{
+            .blog-title-deco-left{
+                background-image: url("../images/title\ deco-left-sm.png");
+                width: 56px;
+                height: 6px;
+            }
+            .blog-title-deco-right{
+                background-image: url("../images/title\ deco-right-sm.png");
+                width: 56px;
+                height: 6px;
+            }
+            .blog-title{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 28.8px;
+                letter-spacing: 3.84px;  //figma 寫 12%
+            }	
+        }
+
+    }
+
+
+}

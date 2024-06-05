@@ -4,34 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品集</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/all.css">
     <script src="js/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/all.js"></script>
 </head>
 <body>
-    <div class="wrap wrap-gray">
+    <div class="wrap">
         <!-- 區塊：Header -->
-        <div class="header container">
-            <div class="logo">
-                <h1>
-                    <img src="images/logo.png" alt="LOGO">
-                        <a href="index.html" target="_blank"></a>
-                    </img>
-                </h1>
-            </div>
-            <ul class="menu">
-                <li><div class="menu-deco-down"><a href="index.html" target="_blank">首頁</a></div></li>
-                <li><div class="menu-deco-down"><a href="works.html" target="_blank">作品集</a></div></li>
-                <li><div class="menu-deco-down"><a href="">服務項目</a></div></li>
-                <li><div class="menu-deco-down"><a href="">部落格</a></div></li>
-                <li><div class="menu-deco-down"><a href="">聯絡我</a></div></li>
-            </ul>
-            <div class="menuBtn">
-                <a href=""><img class="menuBtn-pic" src="images/menu.png" alt="選單"></a>
+        <div class="header-bg">
+            <div class="header container">
+                <div class="logo">
+                    <h1>
+                        <a href="index.html" target="_blank">Noel</a>                    
+                    </h1>
+                </div>
+                <ul class="nav">
+                    <li>
+                        <a href="index.html" target="_blank">首頁
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <li class="nav-active">
+                        <a href="works.html" target="_blank">作品集
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="service.html" target="_blank">服務項目
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog.html" target="_blank">部落格
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html" target="_blank">聯絡我
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <!-- <li><div class="menu-deco-down"><a href="index.html" target="_blank">首頁</a></div></li>
+                    <li><div class="menu-deco-down"><a href="works.html" target="_blank">作品集</a></div></li>
+                    <li><div class="menu-deco-down"><a href="service.html" target="_blank">服務項目</a></div></li>
+                    <li><div class="menu-deco-down"><a href="blog.html" target="_blank">部落格</a></div></li>
+                    <li><div class="menu-deco-down"><a href="contact.html" target="_blank">聯絡我</a></div></li> -->
+                </ul>
+                <div class="navBtn">
+                    <a href="#">
+                        <img class="nav-pic" src="images/menu.png">
+                    </a>
+                </div>
             </div>
         </div>
         <!-- 區塊：Banner -->
-        <div class="banner-bg">
+        <div class="wp-banner-bg">
             <div class="container">
                 <div class="quote">
                     <span class="quote-left"><img src="images/quote-left.png" alt=""></span>
@@ -48,7 +92,7 @@
                     <span class="quote-right"><img src="images/quote-right.png" alt=""></span>
                 </div>
                 
-                <ul class="banner-list">
+                <ul class="wp-banner-list">
                     <li class="list-1">
                         <h3>2B經驗</h3>
                         <hr>
@@ -66,7 +110,7 @@
         <!-- 區塊：卡片區塊 -->
         <div class="works">
             <ul class="works-list container">
-                <li class="card">
+                <li class="card" data-bs-toggle="modal" data-bs-target="#works-modal">
                     <img src="images/work-image1.png" alt="星際旅行訂票平台-作品圖">
                     <div class="works-text">
                         <h2>星際旅行訂票平台</h2>
@@ -78,7 +122,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" data-bs-toggle="modal" data-bs-target="#works-modal">
                     <img src="images/work-image2.png" alt="理財App-作品圖">
                     <div class="works-text">
                         <h2>理財App</h2>
@@ -90,7 +134,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" data-bs-toggle="modal" data-bs-target="#works-modal">
                     <img src="images/work-image3.png" alt="醫美診所官網-作品圖">
                     <div class="works-text">
                         <h2>醫美診所官網</h2>
@@ -102,7 +146,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" data-bs-toggle="modal" data-bs-target="#works-modal">
                     <img src="images/work-image4.png" alt="美美美早餐店 POS 機 UI Design-作品圖">
                     <div class="works-text">
                         <h2>美美美早餐店 POS 機 UI Design</h2>
@@ -114,7 +158,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" data-bs-toggle="modal" data-bs-target="#works-modal">
                     <img src="images/work-image5.png" alt="美美美早餐店 POS 機 UI Design-作品圖">
                     <div class="works-text">
                         <h2>電影院訂票系統</h2>
@@ -126,7 +170,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" data-bs-toggle="modal" data-bs-target="#works-modal">
                     <img src="images/work-image6.png" alt="美美美早餐店 POS 機 UI Design-作品圖">
                     <div class="works-text">
                         <h2>巧克巧克形象官網設計</h2>
@@ -141,11 +185,72 @@
             </ul>
             <!-- 分頁按鈕 -->
             <ul class="pagination container">
-                <li><a class="page-selected" href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
+                <li><a class="page-selected" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
             </ul>
         </div>
+        <!-- 個別作品內頁 -->
+
+        <!-- Modal -->
+    
+        <!--而這邊的 ID 就需要寫上與 data-bs-target 的 ID 指向名，就像上方的按鈕是郵差而這邊是門牌號碼，我們需要正確配對讓點擊按鈕時能開啟這邊的實體-->
+        <div class="modal fade" id="works-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            
+            <!--因為我們需要使用到垂直置中，而 bootstrap 是有設定好我們需要的垂直置中的功能，可以透過 HackMD 提到的官方文件，將語法添加在這邊-->
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- 放 Modal Header 內容 -->
+                        <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 放 Modal Body 內容 -->
+                        <div class="work-introduce">
+                            <div class="work-name">
+                                <h2>星際旅行訂票平台</h2>
+                                <p>悠遊宇宙的夢想，從這裡開始實現</p>
+                            </div>
+                            <div class="work-concept">
+                                <h3>STAR TRAVEL 為 KK 公司宇宙旅行的購票網站。<br>
+                                    主要從地球出發，目的地包含月球、火星、水星、木星；未來太空轉運站建置完畢，將再擴增目的地土星和金星。</h2>
+                                <div class="design-rules">
+                                    <p>設計原則：宇宙旅行、深色背景、強烈視覺效果</p>
+                                    <p>開發方式：Bootstrap、Javascript、RWD</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-intro-detail-bg">
+                            <ul class="work-intro-detail">
+                                <li>
+                                    <img src="images/modal-image1.png" alt="主視覺">
+                                    <h3>主視覺</h3>
+                                    <p>可直接設定日期、起迄星球、張數，快速查詢可購買的票券。</p>
+                                </li>
+                                <li>
+                                    <img src="images/modal-image2.png" alt="推薦查詢">
+                                    <h3>推薦查詢</h3>
+                                    <p>給予最快起飛，以及最熱門的景點推薦，協助使用者進行選擇。</p>
+                                </li>
+                            </ul>
+                        </div>  
+
+
+
+
+
+
+                    </div>
+                    <!-- <div class="modal-footer">
+                        //放 Modal Footer 內容
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                </div>
+            </div>
+            </div>
+
         <!-- 區塊：footer -->
         <div class="footer-bg">
             <div class="footer container">
@@ -154,23 +259,23 @@
                     <p class="footer-description">若有數位產品設計和開發相關問題<br>
                         歡迎填寫表單，或直接與我聯絡！
                     </p>
-                    <p class="contact">service@hexschool.com</p>
+                    <p class="contact"><a href="mailto:service@hexschool.com">service@hexschool.com</a></p>
                 </div>
                 <ul class="footer-social">
                     <li>
-                        <a class="social-btn social-btn-selected" href="http://" target="_blank" >
+                        <a class="footer-social-btn social-btn-selected" href="#" target="_blank" >
                             <img src="images/list.png" alt="">
                             <h4>填寫表單</h4>
                         </a>
                     </li>
                     <li>
-                        <a class="social-btn" href="http://" target="_blank" >
+                        <a class="footer-social-btn" href="#" target="_blank" >
                             <img src="images/instagram.svg" alt="Instagram">
                             <h4>hexschool_demo</h4>
                         </a>
                     </li>
                     <li>
-                        <a class="social-btn" href="http://" target="_blank" >
+                        <a class="footer-social-btn" href="#" target="_blank" >
                             <img src="images/facebook.svg" alt="Facebook官方粉絲團">
                             <h4>hexschoolTW</h4>
                         </a>
@@ -178,8 +283,6 @@
                 </ul>
             </div>
         </div>
-
-
     </div>
 </body>
 </html>

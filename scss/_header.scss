@@ -1,0 +1,308 @@
+// Header 的 css
+
+
+// header 置頂使用
+body {
+    padding-top: 96px;
+}
+
+// .container{
+// 	max-width: 1296px;
+// 	margin: 0 auto;
+//     /* background-color: aqua; */
+// }
+
+.header-bg{
+    background-color: #fff;
+    border-bottom: 1px solid $gray-200;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    h1{
+        a{
+            /* 為了 SEO 搜尋，改用圖片取代文字寫法，參考此篇 https://ithelp.ithome.com.tw/m/articles/10215276 */
+
+            /* 載入 LOGO 圖片 */
+            background-image:url(../images/logo.png);
+            width: 90px;
+            height: 40px;
+            
+            /* 文字縮排，縮排 101% 等於完全縮到原來的寬度之外 */
+            text-indent: 101%;
+            
+            /* overflow 當原素滿出他原來的框框時要做什麼動作，選擇 hidden 隱藏他，這是看不到文字的主因 */
+            overflow:hidden;
+            
+            /* white-space 決定如何處理空白字元，因為就算是空白字元，也還是算佔空間，若超出空間可能會啟動捲軸，所以我們設定為nowrap，就不會有卷軸產生 */
+            white-space: nowrap;
+            
+            /* 浮起來靠左排 */
+            float:left; 
+        }
+    }
+}
+
+.nav{
+    display: flex;
+    margin-left: 318px;
+    gap: 40px;
+    li{
+        // 撐開 Header 使用
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+}
+
+.nav{
+    a{
+        padding: 4px 8px 4px 8px;
+
+        position: relative;
+    
+        &:hover{
+            font-weight: 600;
+
+            // Menu 裝飾：四個角
+            .nav-corner-tl, .nav-corner-tr, .nav-corner-bl, .nav-corner-br{
+                position: absolute;
+                width: 8px;
+                height: 8px;
+            }
+            .nav-corner-tl{
+                top: 0;
+                left: 0;
+                border-top: 1px solid $gray-500;
+                border-left: 1px solid $gray-500;
+            }
+            .nav-corner-tr{
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                top: 0;
+                right: 0;
+                border-top: 1px solid $gray-500;
+                border-right: 1px solid $gray-500;
+            }
+            .nav-corner-bl{
+                bottom: 0;
+                left: 0;
+                border-bottom: 1px solid $gray-500;
+                border-left: 1px solid $gray-500;
+            }
+            .nav-corner-br{
+                bottom: 0;
+                right: 0;
+                border-bottom: 1px solid $gray-500;
+                border-right: 1px solid $gray-500;
+            }
+
+        }
+    }
+}
+
+// 瞄準當前頁面 nav
+.nav-active{
+    font-weight: 600;
+    a{
+        position: relative;
+        .nav-corner-tl, .nav-corner-tr, .nav-corner-bl, .nav-corner-br{
+            position: absolute;
+            width: 8px;
+            height: 8px;
+        }
+        .nav-corner-tl{
+            top: 0;
+            left: 0;
+            border-top: 1px solid $gray-500;
+            border-left: 1px solid $gray-500;
+        }
+        .nav-corner-tr{
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 0;
+            right: 0;
+            border-top: 1px solid $gray-500;
+            border-right: 1px solid $gray-500;
+        }
+        .nav-corner-bl{
+            bottom: 0;
+            left: 0;
+            border-bottom: 1px solid $gray-500;
+            border-left: 1px solid $gray-500;
+        }
+        .nav-corner-br{
+            bottom: 0;
+            right: 0;
+            border-bottom: 1px solid $gray-500;
+            border-right: 1px solid $gray-500;
+        }
+    }
+}
+
+
+
+
+// Header 四個角舊的寫法，缺點 - 1.需要多包一層 div 去做偽元素出來 2. 四個角高度不相同
+
+// .menu{
+//     a{
+//         padding: 4px 8px 4px 8px;
+        
+//         /* 製作偽元素使用 */
+//         position: relative;
+    
+//         &:hover{
+//             font-weight: 600;
+//         }
+//         /* 當滑鼠 Hover 時，產生瞄準效果 */
+//         &:hover::before{
+//             position: absolute;
+//             content: '';
+//             width: 8px;
+//             height: 8px;
+//             top: 0;
+//             left: 0;
+//             border-top: 1px solid #919191;
+//             border-left: 1px solid #919191;
+//         }
+//         &:hover::after{
+//             position: absolute;
+//             content: '';
+//             width: 8px;
+//             height: 8px;
+//             top: 0;
+//             right: 0;
+//             border-top: 1px solid #919191;
+//             border-right: 1px solid #919191;
+//         }
+//     }
+// } 
+    
+// .menu-deco-down{
+
+//     /* 製作偽元素使用 */
+//     position: relative;
+
+//     &:hover::before{
+//         position: absolute;
+//         content: '';
+//         width: 8px;
+//         height: 8px;
+//         left: 0;
+//         bottom: 0;
+//         border-left: 1px solid #919191;
+//         border-bottom: 1px solid #919191;
+//     }
+//     &:hover::after{
+//         position: absolute;
+//         content: '';
+//         width: 8px;
+//         height: 8px;
+//         right: 0;
+//         bottom: 0;
+//         border-right: 1px solid #919191;
+//         border-bottom: 1px solid #919191;
+//     }
+// }
+
+// .menu-active{
+//     font-weight: 600;
+//     /* 製作偽元素使用 */
+//     position: relative;
+
+//     &::before{
+//         position: absolute;
+//         content: '';
+//         width: 8px;
+//         height: 8px;
+//         left: 0;
+//         bottom: 0;
+//         border-left: 1px solid #919191;
+//         border-bottom: 1px solid #919191;
+//         -webkit-box-reflect: above 12px;  // 鏡射效果
+//     }
+//     &::after{
+//         position: absolute;
+//         content: '';
+//         width: 8px;
+//         height: 8px;
+//         right: 0;
+//         bottom: 0;
+//         border-right: 1px solid #919191;
+//         border-bottom: 1px solid #919191;
+//         -webkit-box-reflect: above 12px;  // 鏡射效果
+//     }
+// }
+
+
+
+.navBtn{
+    display: none;
+}
+
+/* iPad 版 */
+@media (max-width:992px) {
+    body {
+        padding-top: 56px;
+    }
+    .header{
+        position: relative;
+        z-index: 11;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav{
+        font-size: 20px;
+
+        margin-left: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100%;
+
+        /* 預設收起來 */
+        display: none;
+
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        gap: 24px;
+
+        text-align: center;
+        z-index: 10;
+        border-top: 1px solid $gray-200;
+        li{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    .nav-deco-down{
+        display: inline;
+    }
+    .navBtn{
+        display: initial;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .close-pic{
+        display: none;
+    }
+}

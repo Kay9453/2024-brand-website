@@ -5,9 +5,348 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁</title>
     <link rel="stylesheet" href="css/all.css">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/all.js"></script>
 </head>
 <body>
-    <h2>我是首頁，還沒做.....</h2>
+    <div class="wrap">
+        <!-- 區塊：Header -->
+        <div class="header-bg">
+            <div class="header container">
+                <div class="logo">
+                    <h1>
+                        <a href="index.html" target="_blank">Noel</a>                    
+                    </h1>
+                </div>
+                <ul class="nav">
+                    <li class="nav-active">
+                        <a href="index.html" target="_blank">首頁
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="works.html" target="_blank">作品集
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="service.html" target="_blank">服務項目
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog.html" target="_blank">部落格
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html" target="_blank">聯絡我
+                            <span class="nav-corner-tl"></span>
+                            <span class="nav-corner-tr"></span>
+                            <span class="nav-corner-bl"></span>
+                            <span class="nav-corner-br"></span>
+                        </a>
+                    </li>
+                    <!-- <li><div class="menu-deco-down"><a href="index.html" target="_blank">首頁</a></div></li>
+                    <li><div class="menu-deco-down"><a href="works.html" target="_blank">作品集</a></div></li>
+                    <li><div class="menu-deco-down"><a href="service.html" target="_blank">服務項目</a></div></li>
+                    <li><div class="menu-deco-down"><a href="blog.html" target="_blank">部落格</a></div></li>
+                    <li><div class="menu-deco-down"><a href="contact.html" target="_blank">聯絡我</a></div></li> -->
+                </ul>
+                <div class="navBtn">
+                    <a href="#">
+                        <img class="nav-pic" src="images/menu.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 區塊：Banner -->
+        <div class="banner-bg">
+            <div class="banner">
+                <div class="cv">
+                    <img src="images/hero-lg.png" alt="主視覺">
+                </div>
+                <div class="self-intro">
+                    <h2>Hi！我是 Noel</h2>
+                    <h3>具有 10 年經驗
+                        <span class="mark-section">的 資深 UI 設計師<img class="mark" src="images/mark.png" alt="標示重點"></span>
+                        <span class="mark-section"> 兼 前端工程師<img class="mark" src="images/mark.png" alt="標示重點"></span>
+                        技術雙修並行，熱衷於優化使用者的網頁體驗
+                    </h3>
+                    <p>WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN</p>
+                    <ul class="social-btn">
+                        <li><img src="images/instagram.svg" alt="Noel Instagram"></li>
+                        <li class="social-btn-middle"><img src="images/facebook.svg" alt="Noel Facebook"></li>
+                        <li><img src="images/youtube.png" alt="Noel Youtube"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 區塊：作品介紹 -->
+        <div class="works-intro">
+            <div class="title-sec container">
+                <span class="title-deco-left"></span>
+                <h2 class="title">作品介紹</h2>
+                <span class="title-deco-right"></span>
+            </div>
+            
+            <div class="work1-bg">
+                <div class="works-container">
+                    <div class="works-pic">
+                        <img src="images/homepage-work1.png" alt="作品1">
+                    </div>
+                    <div class="works-content-bg">
+                        <div class="works-content">
+                            <h2>星際旅行訂票平台</h2>
+                            <p>悠遊宇宙的夢想，從這裡開始實現</p>
+                            <ul class="works-tags">
+                                <li>網頁設計</li>
+                                <li>響應式設計</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                            <a class="works-btn" href="works.html" target="_blank">
+                                <div class="btn-text">完整介紹</div>
+                                <img src="images/Arrow Forward.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="works-content-mobile">
+                        <h2>星際旅行訂票平台</h2>
+                        <p>悠遊宇宙的夢想，從這裡開始實現</p>
+                        <ul class="works-tags">
+                            <li>網頁設計</li>
+                            <li>響應式設計</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                        <a class="works-btn" href="works.html" target="_blank">
+                            <div class="btn-text">完整介紹</div>
+                            <img src="images/Arrow Forward.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="work2-bg">
+                <div class="works2-container">
+                    <!-- <div class="works-pic-2">
+                        <img src="images/homepage-work2.png" alt="作品2">
+                    </div> -->
+                    <div class="work2-filled"></div>
+                    <div class="works-pic-2"></div>
+                    <div class="work2-bg-blur"></div>
+                    <div class="works-content-bg">
+                        <div class="works-content">
+                            <h2>理財APP</h2>
+                            <p>連動帳戶與行動支付，讓 AI 提供您最好的理財建議</p>
+                            <ul class="works-tags">
+                                <li>APP設計</li>
+                                <li>iOS</li>
+                                <li>React</li>
+                            </ul>
+                            <a class="works-btn" href="works.html" target="_blank">
+                                <div class="btn-text">完整介紹</div>
+                                <img src="images/Arrow Forward.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="works-content-mobile">
+                        <h2>理財APP</h2>
+                        <p>連動帳戶與行動支付，讓 AI 提供您最好的理財建議</p>
+                        <ul class="works-tags">
+                            <li>APP設計</li>
+                            <li>iOS</li>
+                            <li>React</li>
+                        </ul>
+                        <a class="works-btn" href="works.html" target="_blank">
+                            <div class="btn-text">完整介紹</div>
+                            <img src="images/Arrow Forward.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="work3-bg">
+                <div class="works-container">
+                    <div class="works-pic-3">
+                        <img src="images/homepage-work3.png" alt="作品3">
+                    </div>
+                    <div class="works-content-bg">
+                        <div class="works-content">
+                            <h2>醫美診所官網</h2>
+                            <p>永保青春的秘密，從粹究開始</p>
+                            <ul class="works-tags">
+                                <li>網頁設計</li>
+                                <li>響應式設計</li>
+                                <li>ＷordPress</li>
+                            </ul>
+                            <a class="works-btn" href="works.html" target="_blank">
+                                <div class="btn-text">完整介紹</div>
+                                <img src="images/Arrow Forward.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="works-content-mobile">
+                        <h2>醫美診所官網</h2>
+                        <p>永保青春的秘密，從粹究開始</p>
+                        <ul class="works-tags">
+                            <li>網頁設計</li>
+                            <li>響應式設計</li>
+                            <li>ＷordPress</li>
+                        </ul>
+                        <a class="works-btn" href="works.html" target="_blank">
+                            <div class="btn-text">完整介紹</div>
+                            <img src="images/Arrow Forward.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 區塊：服務項目 -->
+        <div class="service-bg">
+            <div class="service container">
+                <div class="title-sec">
+                    <span class="title-deco-left"></span>
+                    <h2 class="title">服務項目</h2>
+                    <span class="title-deco-right"></span>
+                </div>
+                <ul class="service-list">
+                    <li>
+                        <img src="images/service-item-visual.png" alt="平面設計">
+                        <h3>平面設計</h3>
+                    </li>
+                    <li>
+                        <img src="images/service-item-ui.png" alt="UI 設計">
+                        <h3>UI 設計</h3>
+                    </li>
+                    <li>
+                        <img src="images/service-item-html&css.png" alt="切版服務">
+                        <h3>切版服務</h3>
+                    </li>
+                    <li>
+                        <img src="images/service-item-front-end.png" alt="前端開發">
+                        <h3>前端開發</h3>
+                    </li>
+                </ul>
+                <div class="know-more">
+                    <p>想要合作或瞭解更多？</p>
+                    <a class="service-btn" href="#">
+                        <div class="btn-text">詳細內容與合作流程</div>
+                        <img src="images/Arrow Forward.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 區塊：精選文章 -->
+        <div class="article-bg">
+            <div class="article container">
+                <div class="title-sec">
+                    <span class="title-deco-left"></span>
+                    <h2 class="title">精選文章</h2>
+                    <span class="title-deco-right"></span>
+                </div>
+                <ul class="article-list">
+                    <li class="article-item">
+                        <div class="article-pic">
+                            <img src="images/article-image1.png" alt="">
+                        </div>  
+                        <div class="article-content">
+                            <h3>Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)</h3>
+                            <div class="tags-date">
+                                <ul class="article-tags">
+                                    <li>UI/UX 新知</li>
+                                </ul>
+                                <span class="date">2024/02/10</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="article-item">
+                        <div class="article-pic">
+                            <img src="images/article-image2.png" alt="">
+                        </div>
+                        <div class="article-content">
+                            <h3>給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)</h3>
+                            <div class="tags-date">
+                                <ul class="article-tags">
+                                    <li>UI/UX 新知</li>
+                                </ul>
+                                <span class="date">2023/11/20</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="article-item">
+                        <div class="article-pic">
+                            <img src="images/article-image3.png" alt="">
+                        </div>
+                        <div class="article-content">
+                            <h3>給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)</h3>
+                            <div class="tags-date">
+                                <ul class="article-tags">
+                                    <li>UI/UX 新知</li>
+                                </ul>
+                                <span class="date">2023/10/18</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pagination-dotted">
+                    <li class="selected"><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+                <a class="article-btn" href="#">
+                    <div class="btn-text">更多文章</div>
+                    <img src="images/Arrow Forward.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 區塊：footer -->
+        <div class="footer-bg">
+            <div class="footer container">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="LOGO">
+                    <p class="footer-description">若有數位產品設計和開發相關問題<br>
+                        歡迎填寫表單，或直接與我聯絡！
+                    </p>
+                    <p class="contact"><a href="mailto:service@hexschool.com">service@hexschool.com</a></p>
+                </div>
+                <ul class="footer-social">
+                    <li>
+                        <a class="footer-social-btn social-btn-selected" href="http://" target="_blank" >
+                            <img src="images/list.png" alt="">
+                            <h4>填寫表單</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-social-btn" href="http://" target="_blank" >
+                            <img src="images/instagram.svg" alt="Instagram">
+                            <h4>hexschool_demo</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-social-btn" href="http://" target="_blank" >
+                            <img src="images/facebook.svg" alt="Facebook官方粉絲團">
+                            <h4>hexschoolTW</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
     
 </body>
 </html>

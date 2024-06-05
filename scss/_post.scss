@@ -1,0 +1,255 @@
+//頁面：部落格內文 post
+
+
+// 內文+右側 Menu
+.post{
+    display: flex;
+    gap: 134px;
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+// 內文內容
+.post-content{
+    width: 75%;
+    // 標題區塊：主標+副標+發布時間+tag
+    .post-title-sec{
+        margin-bottom: 64px;
+        .post-timetag{
+            color: $gray-500;
+            display: flex;
+            gap: 8px;
+        }
+        .post-title-de{
+            color: $gray-700;
+            margin-top: 40px;
+            text-align: center;
+            h2{
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 38.4px;
+            }
+            p{
+                font-size: 24px;
+                line-height: 28.8px;
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
+// 內文
+.post-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    // 每個段落
+    .post-paragraph{
+        font-size: 20px;
+        color: $gray-700;
+        h3{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28.8px;
+            margin-bottom: 16px;
+        }
+    }
+    // 產品圖區塊
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        li{
+            width: 48%;
+            p{
+                color: $gray-600;
+                text-align: center;
+                margin-top: 8px;
+            }
+        }
+    }
+    .writer{
+        color: $gray-700;
+    }
+}
+
+//相關文章
+.po-article{
+    border-top: 1px solid $gray-400;
+    //標題
+    .po-title{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33.6px;
+        color: $gray-700;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+    .po-article-list{
+        display: flex;
+        gap: 24px;
+        margin-bottom: 120px;
+    }
+}
+
+.po-article-item{
+    max-width: 32%;
+    .po-article-pic{
+        img{
+            border: 1px solid $gray-200;
+            border-radius: 8px;
+        }
+    }
+}
+.po-article-content{
+    color: $gray-700;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h3{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+    .po-tags-date{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .po-article-tags{
+            li{
+                padding: 4px 12px;
+                border-radius: 16px;
+                width: fit-content;
+                background-color: $gray-200;
+            }
+        }
+        .po-date{
+            color: $gray-600;
+        }
+    }
+}
+
+
+
+
+
+/* iPad 版 */
+@media (max-width:992px) {
+    // 內文+右側 Menu
+    .post{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 32px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    // 內文內容
+    .post-content{
+        width: 100%;
+        // 標題區塊：主標+副標+發布時間+tag
+        padding-left: 12px;
+        padding-right: 12px;
+        .post-title-sec{
+            margin-bottom: 24px;
+            .post-timetag{
+                display: flex;
+                justify-content: space-between;        
+                .timetag-deco{
+                    display: none;
+                }
+            }
+            .post-title-de{
+                margin-top: 16px;
+                h2{
+                    font-size: 24px;
+                    line-height: 28.8px;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 19.2px;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+
+    // 內文
+    .post-detail{
+        gap: 32px;
+        // 每個段落
+        .post-paragraph{
+            h3{
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        // 產品圖區塊
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            li{
+                width: 100%;
+                img{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    //相關文章
+    .po-article{
+        //標題
+        .po-title{
+            font-size: 24px;
+            line-height: 28.8px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .po-article-list{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+    }
+
+    .po-article-item{
+        max-width: 416px;
+        margin: 0 auto;
+    }
+    .po-article-content{
+        color: $gray-700;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 16px;
+        h3{
+            font-weight: 600;
+        }
+        .po-tags-date{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    
+}
+
+/* 手機版 */
+@media (max-width:767px) {
+    .po-article{
+        padding-left: 34.5px;
+        padding-right: 34.5px;
+    }
+
+}

@@ -1,0 +1,88 @@
+// 右側文章 Menu 選單
+
+//右側 Menu
+.blog-menu-bg{
+    background-color: $gray-100;
+    width: 24%;
+    .blog-menu{
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap; //遇到連續空白字元與換行字元時，會合併成一個空白字元，不論外層有沒有容器都強制不換行。
+        gap: 32px;
+        padding: 80px;
+        li{
+            a{
+                font-size: 20px;
+                color: $gray-600;
+                border-bottom: 2px solid transparent;
+            }
+            a:hover{
+                color: $gray-800;
+                border-bottom: 2px solid $gray-800;
+            }
+            .selected{
+                color: $gray-800;
+                border-bottom: 2px solid $gray-800;
+            }
+        }
+    }
+}
+/* iPad 版 */
+@media (max-width:992px) {
+    //部落格右側 Menu
+    .blog-menu-bg{
+        // background-color: $gray-100;
+        width: 100%;
+        .blog-menu{
+            display: flex;
+            flex-direction: row;
+            // gap: 32px;
+            padding: 20px 12px;
+            overflow-x: scroll; // 當內容超過容器小，顯示滾動條
+            li{
+                a{
+                    font-size: 16px;
+                    // color: $gray-600;
+                    border-bottom: 1px solid transparent;
+                }
+                a:hover{
+                    // color: $gray-800;
+                    border-bottom: 1px solid $gray-800;
+                }
+                .selected{
+                    // color: $gray-800;
+                    border-bottom: 1px solid $gray-800;
+                }
+            }
+        }
+    }
+}
+/* 手機版 */
+@media (max-width:767px) {
+    //部落格右側 Menu
+    .blog-menu-bg{
+        // background-color: $gray-100;
+        width: 100%;
+        .blog-menu{
+            display: flex;
+            flex-direction: row;
+            // gap: 32px;
+            padding: 20px 12px;
+            li{
+                a{
+                    font-size: 16px;
+                    // color: $gray-600;
+                    border-bottom: 1px solid transparent;
+                }
+                a:hover{
+                    // color: $gray-800;
+                    border-bottom: 1px solid $gray-800;
+                }
+                .selected{
+                    // color: $gray-800;
+                    border-bottom: 1px solid $gray-800;
+                }
+            }
+        }
+    }
+}
