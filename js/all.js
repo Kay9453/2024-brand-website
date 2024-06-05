@@ -16,7 +16,6 @@ $(document).ready(function(){
 
         if (open) {
             $(".nav-pic").attr("src", "images/Close.png");
-
         } else {
             $(".nav-pic").attr("src", "images/menu.png");
         }

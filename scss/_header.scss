@@ -263,37 +263,39 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .nav{
-        font-size: 20px;
-
-        margin-left: 0;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        width: 100%;
-
-        /* 預設收起來 */
-        display: none;
-
-        position: absolute;
-        top: 56px;
-        left: 0;
-        right: 0;
-
-        display: flex;
-        flex-direction: column;
-        background-color: #fff;
-        gap: 24px;
-
-        text-align: center;
-        z-index: 10;
-        border-top: 1px solid $gray-200;
-        li{
-            padding-top: 0;
-            padding-bottom: 0;
+        .nav{
+            font-size: 20px;
+    
+            margin-left: 0;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            width: 100%;
+    
+            position: absolute;
+            top: 56px;
+            left: 0;
+            right: 0;
+    
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            gap: 24px;
+    
+            text-align: center;
+            z-index: 10;
+            border-top: 1px solid $gray-200;
+    
+            li{
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+        .nav-close{
+            /* 預設收起來 */
+            display: none;
         }
     }
+
     .nav-deco-down{
         display: inline;
     }
